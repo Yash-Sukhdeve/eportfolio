@@ -18,17 +18,42 @@ This is a plain HTML/CSS portfolio template built for a workshop talk. No framew
 | `resume.html` | Education and experience as a vertical timeline |
 | `contact.html` | Contact form and links to your profiles |
 | `css/style.css` | One stylesheet for all pages — change 4 variables to retheme |
+| `templates/` | 6 themed templates — pick the one that suits your field |
 | `AI_PROMPTS.md` | Prompts you can paste into ChatGPT or Claude to build/edit any part |
+| `HOSTING_GUIDE.md` | Step-by-step guide to put your portfolio live — written for beginners |
 | `generate_qr.py` | Regenerates `qr-code.png` if you change the URL |
+
+---
+
+## Themed templates
+
+There are 6 ready-to-use templates for different fields, each with a distinct look:
+
+| Template | Field | Theme |
+|----------|-------|-------|
+| `template-cs.html` | Computer Science / SWE | Dark · neon green · monospace |
+| `template-design.html` | Design / UX / Creative Arts | Warm cream · bold coral · editorial serif |
+| `template-data.html` | Data Science / ML | Deep navy · electric teal · dot-grid |
+| `template-bio.html` | Biology / Life Sciences / Pre-Med | Warm organic · forest green · terracotta |
+| `template-business.html` | Business / Finance / Consulting | Dark luxury · warm gold · classical serif |
+| `template-arch.html` | Architecture / Civil / Urban Design | Stark Bauhaus · construction red · bold type |
+
+Open `templates/index.html` to preview all six side by side, or click directly into any template file.
+
+To use a template as your main page, copy its contents into `index.html` and replace the placeholder text.
 
 ---
 
 ## Getting started
 
+**New to GitHub?** Read [`HOSTING_GUIDE.md`](HOSTING_GUIDE.md) first — it walks through everything from creating an account to adding photos and going live.
+
+Quick version if you already know the basics:
+
 1. **Fork** this repo (button top-right on GitHub).
 2. Go to **Settings → Pages → Source → main branch / root** and hit save.
 3. Your site goes live at `https://<your-username>.github.io/undergrad-eportfolio-tutorial/` in about a minute.
-4. Open the files locally and start replacing the placeholder text.
+4. Edit the files and replace the placeholder text.
 
 ---
 
