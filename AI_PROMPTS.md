@@ -1,180 +1,176 @@
-# AI Prompts for Building Your E-Portfolio
+# AI Prompts for Your Portfolio
 
-Copy any prompt below into **ChatGPT, Claude, Gemini, or any AI assistant**.
-Replace the text inside `[ ]` with your own details before sending.
+These are prompts you can paste into ChatGPT, Claude, Gemini, or any other AI assistant to help build and customise your portfolio. Replace anything inside `[ ]` with your own details.
+
+The prompts are specific on purpose — vague prompts get vague answers. The more context you give the AI, the less editing you'll need to do afterward.
 
 ---
 
-## Table of Contents
+## Contents
 
-1. [Getting Started](#1-getting-started)
-2. [Hero Section](#2-hero-section)
+1. [Starting out](#1-starting-out)
+2. [Hero section](#2-hero-section)
 3. [Projects](#3-projects)
 4. [Skills](#4-skills)
-5. [Resume / Timeline](#5-resume--timeline)
-6. [Contact Page](#6-contact-page)
-7. [Design & Themes](#7-design--themes)
-8. [Dark Mode](#8-dark-mode)
+5. [Resume and timeline](#5-resume-and-timeline)
+6. [Contact page](#6-contact-page)
+7. [Colours and fonts](#7-colours-and-fonts)
+8. [Dark mode](#8-dark-mode)
 9. [Animations](#9-animations)
-10. [New Sections](#10-new-sections)
-11. [Debugging & Fixes](#11-debugging--fixes)
-12. [Going Further (JavaScript)](#12-going-further-javascript)
+10. [Adding new sections](#10-adding-new-sections)
+11. [Fixing things](#11-fixing-things)
+12. [Adding JavaScript](#12-adding-javascript)
 
 ---
 
-## 1. Getting Started
+## 1. Starting out
 
-### Generate a full portfolio from scratch
+### Build a portfolio from scratch
 
 ```
-I am a [year, e.g. "third-year"] undergraduate student studying [your major]
-at [your university]. I want to build a personal portfolio website using only
-HTML and CSS (no JavaScript frameworks, no build tools).
+I'm a [year, e.g. "third-year"] undergrad studying [your major] at [your university].
+I want a personal portfolio website using only HTML and CSS — no JavaScript
+frameworks, no npm, no build tools.
 
-My name is [Your Name]. My interests are [e.g. "machine learning, web development,
-open source"]. I have done [number] projects and [number] internships.
+My name is [Your Name]. I'm interested in [e.g. machine learning, web dev, open source].
+I've done [number] projects and [number] internships.
 
 Please generate:
-1. index.html  — hero section with my name, a short bio, and a call-to-action button
-2. css/style.css — a clean, modern stylesheet using CSS variables so I can retheme
-   it by changing one line
+1. index.html — hero section with my name, a short bio, and a button linking to my projects
+2. css/style.css — clean stylesheet using CSS custom properties so I can change the
+   colour scheme by editing one line
 
-Use a colour accent of [your favourite hex colour, e.g. #2563eb].
-Make it mobile-responsive using CSS Grid. No JavaScript required.
+Accent colour: [your hex colour, e.g. #2563eb]
+Responsive using CSS Grid. No JavaScript.
 ```
 
 ---
 
-### Personalise the template I already have
+### Fill in the template I already have
 
 ```
-I have an HTML/CSS portfolio template. Here is my index.html:
+I have an HTML/CSS portfolio template. Here's my index.html:
 
-[paste your index.html here]
+[paste index.html here]
 
-Please update it with these details about me:
+Please update the content with my details:
 - Name: [Your Name]
-- University: [University Name], [City]
+- University: [university], [city]
 - Degree: [e.g. B.Tech Computer Science]
-- Graduation year: [year]
-- Short bio (2–3 sentences): [write your bio here]
+- Graduating: [year]
+- Bio (2–3 sentences): [write something here or ask it to write one based on your details]
 - Interests: [list them]
-- Accent colour I want: [hex colour]
+- Accent colour: [hex]
 
-Keep the same HTML structure. Only change the content and the CSS variable --accent.
+Don't change the HTML structure or CSS classes. Only update the text content
+and the --accent variable.
 ```
 
 ---
 
-## 2. Hero Section
+## 2. Hero section
 
-### Write a compelling bio paragraph
+### Write your bio
 
 ```
-Write a 3-sentence "About Me" paragraph for a portfolio website.
+Write a 3-sentence bio for a portfolio website.
 
 About me:
-- I study [your major] at [university]
-- I am passionate about [topic 1] and [topic 2]
-- I have worked on [a project or internship] where I [what you did]
-- My career goal is to [goal]
+- Studying [major] at [university]
+- I've worked on [project or internship] where I [what you did]
+- I want to work on [type of work] after graduating
 
-Make it sound confident but not arrogant. Write in first person.
-Avoid buzzwords like "passionate" and "leverage". Keep it under 60 words.
+Write it in first person. Don't use words like "passionate", "leverage", or
+"dynamic". Keep it under 60 words and make it sound like a real person wrote it.
 ```
 
 ---
 
-### Add a typing animation to the hero (CSS only)
+### Typewriter animation on your name (CSS only)
 
 ```
-I have this hero heading in my portfolio:
+I have this heading in my portfolio:
 
   <h1>Hi, I'm <span>Your Name</span></h1>
 
-Add a CSS-only typewriter animation to the <span> so it types out my name
-letter by letter on page load. Use @keyframes and the steps() timing function.
-No JavaScript. Show me only the CSS to add and where to put it.
+Add a CSS-only typewriter animation to the <span> so the name types out on
+page load. Use @keyframes with the steps() function. No JavaScript.
+Show me the CSS to add and where it goes in the stylesheet.
 ```
 
 ---
 
-### Add a profile photo with a circular frame
+### Add a circular profile photo
 
 ```
-In my portfolio's hero section I want to display a circular profile photo.
-The photo file is called "photo.jpg" and is in the root of the project.
+I want to add a profile photo to my portfolio hero section. The file is photo.jpg
+in the project root.
 
-Add an <img> tag with:
-- circular crop using border-radius
-- a coloured ring border using CSS variable --accent
-- a slight box-shadow for depth
-- responsive sizing (shrinks gracefully on mobile)
+Add an <img> tag that:
+- Shows as a circle (border-radius)
+- Has a coloured ring border using my --accent CSS variable
+- Has a small drop shadow
+- Shrinks on mobile without breaking the layout
 
-Show me the HTML and CSS to add. My current --accent colour is [hex].
+My --accent colour is [hex]. Show me the HTML and the CSS to add.
 ```
 
 ---
 
 ## 3. Projects
 
-### Generate a project card
+### Add a project card
 
 ```
-Add a project card to my portfolio's projects.html page.
+Add one project card to my projects.html. The card should match the existing style:
+white background, rounded corners, shadow on hover, tech stack as pill badges.
 
-Project details:
-- Title: [Project Title]
-- One-line description: [what it does]
-- Tech stack: [e.g. Python, Flask, PostgreSQL, React]
-- GitHub link: [URL]
-- (optional) Live demo link: [URL or "none"]
+Project:
+- Title: [project title]
+- What it does: [one sentence]
+- Stack: [e.g. Python, Flask, PostgreSQL]
+- GitHub: [URL]
+- Live demo: [URL, or say "none"]
 
-The card should match the existing style: white background, border-radius,
-box-shadow on hover, tech stack shown as pill badges. Show me just the HTML
-block to paste inside the existing .grid div. No new CSS needed.
+Give me just the HTML block to paste inside the .grid div. No new CSS.
 ```
 
 ---
 
-### Add a "Featured" badge to your best project
+### Mark one project as Featured
 
 ```
-I have project cards in my portfolio. I want to mark one card as "Featured"
-with a small coloured badge in the top-right corner of the card.
+I want to add a "Featured" label to one of my project cards — a small badge
+in the top-right corner of the card.
 
-The card's container already has position: relative.
-Use CSS only (no JavaScript). The badge should say "Featured" in white text
-on a background of my --accent colour.
+The card already has position: relative.
+No JavaScript. The badge should say "Featured" in white text on my --accent colour.
 
 Show me the HTML to add inside the card and the CSS to add to my stylesheet.
 ```
 
 ---
 
-### Add a live demo button alongside the GitHub button
+### Add a Live Demo button
 
 ```
-My project cards currently have one button: "View on GitHub".
-I want to add a second button: "Live Demo" that opens a new tab.
+My project cards have one button: "View on GitHub" with class .btn-outline.
+I want to add a second button: "Live Demo" that opens [your URL] in a new tab.
 
-Demo URL: [your URL]
+Make the Live Demo button use .btn (filled) and keep GitHub as .btn-outline,
+so the two buttons look distinct next to each other.
 
-The "Live Demo" button should use the filled style (.btn) and the
-GitHub button should use the outline style (.btn-outline), so they
-look visually distinct side by side.
-
-Show me the updated HTML for one card's button row.
+Show me the updated HTML for the button row of one card.
 ```
 
 ---
 
 ## 4. Skills
 
-### Add a new skill bar
+### Add more skill bars
 
 ```
-I have CSS skill progress bars in my skills.html. Here is one example:
+I have CSS skill progress bars in skills.html. Here's one:
 
   <div class="skill-item">
     <label><span>Python</span><span>90%</span></label>
@@ -183,155 +179,141 @@ I have CSS skill progress bars in my skills.html. Here is one example:
     </div>
   </div>
 
-Add the following new skills in the same format:
+Add these skills in the same format:
 - [Skill 1]: [percentage]%
 - [Skill 2]: [percentage]%
 - [Skill 3]: [percentage]%
 
-Return only the HTML blocks to paste.
+Return just the HTML blocks.
 ```
 
 ---
 
-### Replace progress bars with star ratings
+### Use star ratings instead of bars
 
 ```
-I have CSS progress bar skill items in my portfolio. I want to replace
-the bars with a 5-star rating display using CSS only (no JavaScript, no images).
+I want to replace my CSS skill bars with 5-star ratings. CSS only — no JavaScript,
+no image files, no icon libraries.
 
-Stars should be filled in with --accent colour up to the rating, and empty
-(light grey) for the remainder.
+Stars up to the rating should use --accent colour. Empty stars should be light grey.
+Example: Python — 4.5 out of 5 stars.
 
-For example: Python — 4.5 / 5 stars
-
-Show me how to update one skill item's HTML and the CSS to add.
-The approach must work without any icon library or font.
+Show me the HTML for one skill item and the CSS to add.
 ```
 
 ---
 
-### Add a tools / technologies grid (logos)
+### Add a tools grid
 
 ```
-Below my skill bars I want a "Tools I Use" section showing technology logos
-in a responsive grid. I only have HTML and CSS (no JavaScript).
+Below my skill bars I want a "Tools I Use" section as a responsive icon grid.
+HTML and CSS only.
 
-Technologies to include (use their text abbreviations as placeholders
-since I'll swap in real SVG logos later):
-[list your tools, e.g. VS Code, Git, Docker, AWS, Figma, Linux]
+Tools: [list your tools, e.g. VS Code, Git, Docker, AWS, Figma, Linux]
 
-Create a grid that:
-- Shows 4–5 items per row on desktop, 3 on tablet, 2 on mobile
-- Each item is a small rounded card with the tool name centred
-- Uses --accent colour on hover
-- Uses CSS Grid auto-fit / minmax
+The grid should show 4–5 columns on desktop and 2 on mobile, using CSS Grid
+auto-fit/minmax. Each cell is a small card with the tool name centred.
+Highlight with --accent colour on hover.
 
-Show me the HTML to add to skills.html and the CSS to add to style.css.
+Show me the HTML for skills.html and the CSS for style.css.
 ```
 
 ---
 
-## 5. Resume / Timeline
+## 5. Resume and timeline
 
-### Generate a timeline entry
+### Add a timeline entry
 
 ```
-Add a new entry to my CSS-only resume timeline. Here is an existing entry
-for reference:
+Add an entry to my resume timeline. Here's an existing entry for reference:
 
   <div class="timeline-item">
     <div class="timeline-dot"></div>
     <h4>Software Engineering Intern</h4>
     <p class="meta">Company Name | May 2025 – Jul 2025</p>
-    <p>Description here.</p>
+    <p>Description.</p>
   </div>
 
-New entry details:
-- Role / Degree: [title]
+New entry:
+- Title: [role or degree name]
 - Organisation: [company or university]
-- Date range: [e.g. Jun 2024 – Aug 2024]
-- 2-sentence description: [what you did and one concrete result/number]
+- Dates: [e.g. Jun 2024 – Aug 2024]
+- Description: [what you did, one concrete result if you have one]
 
-Return only the HTML block.
+Return just the HTML block.
 ```
 
 ---
 
-### Write a bullet-point description for a work experience
+### Write bullet points for a job
 
 ```
-Write 2–3 bullet points for a resume timeline entry describing this internship:
+Write 2–3 resume bullet points for this position:
 
-- Company: [company name]
-- Role: [your role]
-- Duration: [dates]
-- What I worked on: [describe in plain language]
-- One measurable result (if any): [e.g. "reduced load time by 30%"]
+- Company: [name]
+- Role: [title]
+- Dates: [start – end]
+- What I did: [describe in plain English]
+- Measurable result (if any): [e.g. cut build time by 40%]
 
-Format as short, action-verb-first sentences (past tense).
-Each bullet point should be under 20 words.
-Keep it factual and specific — avoid vague phrases like "contributed to" or "assisted with".
-```
-
----
-
-### Add a "Download CV" button that triggers a PDF download
-
-```
-I have a resume.html page. I want to add a "Download CV" button that downloads
-a file called "resume.pdf" from the root of my project.
-
-The button should:
-- Use the .btn class (already in my stylesheet)
-- Use the HTML download attribute so it triggers a download instead of opening in browser
-- Say "Download PDF" with a small download icon (use a Unicode character, no icon library)
-
-Show me only the HTML for the button.
+Start each bullet with an action verb in past tense. Keep each one under 20 words.
+Don't use "contributed to", "assisted with", or "helped". Be specific.
 ```
 
 ---
 
-## 6. Contact Page
-
-### Activate the Formspree contact form
+### Download CV button
 
 ```
-I have a contact form in contact.html. The form currently has:
+I want a "Download PDF" button on my resume page that triggers a file download
+of resume.pdf from the project root (not just opening it in the browser).
+
+Use the existing .btn CSS class. Add a small download symbol before the text
+using a Unicode character — no icon library.
+
+Show me the HTML only.
+```
+
+---
+
+## 6. Contact page
+
+### Connect the Formspree form
+
+```
+My contact form has this action:
 
   <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
 
-My Formspree form ID is: [your ID from formspree.io]
+My Formspree form ID is: [your ID]
 
-1. Update the action URL with my real ID.
-2. Add a hidden redirect field so after submission the user is sent back to contact.html.
-3. Add a honeypot field to reduce spam (Formspree supports _gotcha).
+1. Update the action URL.
+2. Add a hidden field to redirect the user back to contact.html after they submit.
+3. Add a honeypot field (_gotcha) to cut down on spam.
 
-Show me the updated opening <form> tag and the hidden fields to add inside it.
-No other changes needed.
+Show me just the updated form opening tag and the hidden fields to add inside it.
 ```
 
 ---
 
-### Add a "Thank you" message after form submission (CSS only)
+### Show a thank-you message after submission (no JavaScript)
 
 ```
-My contact form submits to Formspree. After submission Formspree adds
-?success=true to the URL. I want to show a "Thank you!" message using
-only HTML and CSS — no JavaScript.
+When someone submits my Formspree form, Formspree redirects back to my page
+with ?success=true in the URL. I want to show a "Thanks, I'll get back to you!"
+message using only HTML and CSS.
 
-I can read URL parameters with the CSS :target selector trick, or use
-a hidden element that becomes visible. Suggest the simplest CSS-only approach
-and show me the HTML and CSS to add to contact.html.
+Suggest the simplest CSS-only approach for this and show me what to add to contact.html.
 ```
 
 ---
 
-## 7. Design & Themes
+## 7. Colours and fonts
 
-### Change the colour scheme
+### Get colour scheme suggestions
 
 ```
-I have a CSS portfolio with these root variables:
+My portfolio uses these CSS variables:
 
   :root {
     --accent:      #2563eb;
@@ -340,21 +322,20 @@ I have a CSS portfolio with these root variables:
     --surface:     #ffffff;
   }
 
-Suggest 3 alternative colour schemes for my portfolio. For each one give me:
-- A name (e.g. "Forest Green", "Deep Purple")
-- The 4 hex values to replace the variables above
-- One sentence on what kind of impression it gives
+Suggest 3 alternative colour schemes. For each give me:
+- A name
+- The 4 hex values
+- One sentence on the mood or impression it creates
 
-I study [your field], so the palette should feel [adjective, e.g. "professional",
-"creative", "technical"].
+I study [your field]. I want it to feel [adjective, e.g. calm and minimal / bold and creative].
 ```
 
 ---
 
-### Switch from a light theme to a soft dark theme
+### Switch to a dark theme
 
 ```
-I have a CSS portfolio using these variables:
+I have a light-theme CSS portfolio with these root variables:
 
   :root {
     --accent:      #2563eb;
@@ -366,9 +347,8 @@ I have a CSS portfolio using these variables:
     --border:      #e2e8f0;
   }
 
-Give me updated variable values for a soft dark theme (not pitch black —
-something like GitHub's dark mode or Notion's dark mode).
-Keep the same --accent blue. Show me only the updated :root block.
+Give me a soft dark theme (think GitHub dark or Notion dark — not pure black).
+Keep the blue accent. Show me just the updated :root block.
 ```
 
 ---
@@ -376,213 +356,194 @@ Keep the same --accent blue. Show me only the updated :root block.
 ### Change the font
 
 ```
-My portfolio uses:
+My portfolio currently uses:
 
   --font: 'Segoe UI', system-ui, sans-serif;
 
-I want to use a Google Font instead. Suggest 3 font options that suit a
-[your field] student portfolio. For each, give me:
-1. The font name and why it works
-2. The <link> tag to add to my <head>
-3. The updated --font variable value
+I want to switch to a Google Font. Suggest 3 options that work for a [your field]
+student portfolio. For each give me:
+1. The font name and why it fits
+2. The <link> tag for the <head>
+3. The updated --font variable
 
-I want the font to feel [adjective, e.g. "modern and clean" / "warm and friendly" /
-"technical and precise"].
+I want it to feel [e.g. modern / warm / technical / approachable].
 ```
 
 ---
 
-## 8. Dark Mode
+## 8. Dark mode
 
-### Add automatic dark mode using prefers-color-scheme
+### Auto dark mode that follows the OS setting
 
 ```
-I have a CSS portfolio with a :root block defining CSS variables for a light theme.
-Here is my current :root:
+I have a CSS portfolio with this :root:
 
-[paste your :root block here]
+[paste your :root block]
 
-Add a @media (prefers-color-scheme: dark) block that overrides those variables
-with a dark theme. Requirements:
-- Background should be around #0f172a (very dark navy)
-- Surface (cards) should be around #1e293b
-- Text should be near-white #f1f5f9
-- Keep --accent the same blue
-- Borders should be visible but subtle
+Add a @media (prefers-color-scheme: dark) block that switches to a dark theme.
+Use roughly:
+- Background: #0f172a
+- Cards: #1e293b
+- Text: #f1f5f9
+- Keep the blue accent unchanged
+- Borders visible but not harsh
 
-Show me only the @media block to append to style.css.
-No HTML changes needed — CSS variables handle everything automatically.
+Show me just the @media block to append to style.css. No HTML changes needed.
 ```
 
 ---
 
-### Add a manual dark/light toggle button (CSS only)
+### Manual dark/light toggle button (no JavaScript)
 
 ```
-I want a dark/light mode toggle button in my portfolio navbar.
-Constraint: no JavaScript — use the CSS checkbox trick.
+I want a dark/light toggle switch in my nav. CSS only — use the checkbox trick.
 
-The toggle should:
-- Look like a modern pill/switch (not a checkbox)
-- Show a sun icon in light mode and a moon icon in dark mode
-- Use Unicode characters for the icons (no icon library)
-- Switch the :root CSS variables when checked
+The toggle should look like a pill/switch (not a raw checkbox).
+Use ☀ and ☽ Unicode characters for the icons — no icon fonts.
+When checked, it should flip the :root CSS variables to dark mode values.
 
-Show me the HTML to add to my nav, and the CSS to add to my stylesheet.
-Keep it under 40 lines of CSS.
+Show me the HTML to add to my nav and the CSS to add to my stylesheet.
+Keep the CSS under 40 lines.
 ```
 
 ---
 
 ## 9. Animations
 
-### Add a fade-in on scroll (CSS only, no JavaScript)
+### Fade-in cards on scroll (CSS only)
 
 ```
-I want sections on my portfolio to fade in as the user scrolls down.
-Constraint: CSS only, no JavaScript (use @keyframes + animation-timeline
-or the animation-delay stagger trick).
+I want my portfolio cards to fade in as the user scrolls down.
+CSS only — no JavaScript.
 
-I have section cards inside a .grid div. Each card should:
-- Start invisible and slightly below its final position
+Cards are inside a .grid div. Each card should:
+- Start transparent and slightly lower than its final position
 - Animate into place over 0.4s with ease-out
-- Stagger slightly so cards animate one after another
+- Stagger so they come in one after another
 
-Show me the CSS to add to my stylesheet. If animation-timeline has poor
-browser support, fall back to a simpler approach that still looks good.
+If animation-timeline scroll has poor browser support, use animation-delay staggering
+as a fallback. Show me the CSS to add.
 ```
 
 ---
 
-### Add a hover effect to project cards
+### Better card hover effect
 
 ```
-My project cards currently have this hover CSS:
+My project cards currently have this hover state:
 
   .card:hover { transform: translateY(-3px); box-shadow: 0 6px 18px rgba(0,0,0,.12); }
 
-I want a more interesting hover effect. Suggest 3 options — for each show me
-the CSS and describe the effect in one sentence. Requirements:
-- CSS only
-- Subtle and professional (this is a job-search portfolio)
-- Must not break the card's layout
+Give me 3 different hover effect options. For each, show the CSS and describe the effect
+in one sentence. CSS only. Subtle enough for a job-search portfolio — nothing flashy.
 ```
 
 ---
 
-## 10. New Sections
+## 10. Adding new sections
 
-### Add a blog / writing section
+### Writing / blog list
 
 ```
-I want to add a "Writing" or "Blog" section to my portfolio.
-I don't have a backend — just static HTML files.
+I want a simple "Writing" section on my portfolio. No backend — just links to
+separate .html files for each post.
 
-Each post will be a separate HTML file. The section should show:
-- Post title
+Each entry should show:
+- Post title (linked)
 - Date
-- 1-sentence summary
-- "Read more" link
+- One-sentence summary
 
-Design it as a simple list (not cards) to look more like a real blog.
-Show me the HTML to add to index.html and any new CSS to add to style.css.
-Keep the same design language (CSS variables, same font, etc.).
+Display it as a list, not cards. Add the HTML to index.html and any new CSS to style.css.
+Match the existing design (same font, same CSS variables).
 ```
 
 ---
 
-### Add an "Open Source Contributions" section
+### Open source contributions
 
 ```
-I want to add an "Open Source" section to my portfolio showing repos I've
-contributed to. It should not be a card grid — instead use a compact table or
-list so I can show 6–8 items without the page looking cluttered.
+I want a compact "Open Source" section listing repos I've contributed to.
+Don't use a card grid — use a list or table so I can fit 6–8 entries without
+the page feeling heavy.
 
-Each row/item should show:
-- Repo name (linked to GitHub)
-- What I contributed (one line)
-- Language badge (pill, same style as my existing .badge class)
-- Stars count (just a number with a ★ character)
+Each entry: repo name (linked to GitHub), what I contributed (one line),
+language badge (same .badge style as the rest of the page), star count with a ★.
 
 Show me the HTML and any new CSS needed.
 ```
 
 ---
 
-### Add a certifications section with badge images
+### Certifications
 
 ```
-I want to add a "Certifications" section to my resume.html or skills.html.
-Each certification should show:
-- Certification name
+I want to add a certifications section to my portfolio. Each cert should show:
+- Name
 - Issuing organisation
-- Date earned
-- (Optional) A link to verify it
+- Date
+- Verification link (optional)
 
-I have PNG badge images saved as cert-aws.png, cert-google.png, etc.
-Display them as small circular or square thumbnails next to the text.
+I have badge images saved as cert-aws.png, cert-google.png, etc.
+Show each badge as a small thumbnail next to the text.
 
-Show me the HTML and CSS. Keep the same card / timeline style as the rest
-of the page.
+Show me the HTML and CSS. Keep the same visual style as the rest of the page.
 ```
 
 ---
 
-### Add a "Currently Reading" or "Bookshelf" section
+### Currently reading / bookshelf
 
 ```
-I want to add a small "Currently Reading" section to my About/Home page.
-It should show 2–3 book covers (images) with the title and author beneath.
-Keep it minimal — no stars, no reviews.
+I want a small "Currently Reading" section on my home page showing 2–3 books.
+Each book: cover image, title, author. That's it — no stars or reviews.
 
-Book cover images will be local files: book1.jpg, book2.jpg, book3.jpg.
+Cover images are book1.jpg, book2.jpg, book3.jpg in the project root.
 
-Show me compact HTML and CSS for this section. It should look like a small
-shelf, not a full-width section. Use flexbox.
+Show me the HTML and CSS. Use flexbox. It should sit inside a section on the page,
+not take over the full width.
 ```
 
 ---
 
-## 11. Debugging & Fixes
+## 11. Fixing things
 
-### Fix a layout that breaks on mobile
+### Layout breaks on mobile
 
 ```
-My portfolio page looks fine on desktop but breaks on mobile.
-Here is the problem area of my CSS:
+My portfolio looks fine on desktop but something goes wrong on mobile.
+Here's the CSS that's probably involved:
 
-[paste the CSS block that's causing the issue]
+[paste the CSS]
 
-And here is the relevant HTML:
+Here's the HTML:
 
 [paste the HTML]
 
-The problem is: [describe what you see — e.g. "cards overflow off screen",
-"nav links stack vertically and overlap the logo", "hero image is too big"]
+The problem: [describe it — e.g. "cards overflow the screen", "nav links overlap the logo",
+"the hero image is too big and pushes everything down"]
 
-Fix the CSS to make it work correctly on screens below 600px wide.
-Explain what caused the issue and what you changed.
+Fix the CSS so it works on screens narrower than 600px. Tell me what was wrong
+and what you changed.
 ```
 
 ---
 
-### Fix text that is hard to read
+### Low contrast after changing colours
 
 ```
-I changed my portfolio's --accent colour to [your colour].
-Now some text on [light/dark] backgrounds is hard to read.
+I changed my --accent to [colour] and now some text is hard to read.
 
-Here is my :root:
+Here's my :root:
 
-[paste :root block]
+[paste it]
 
 Check the contrast ratios for:
-1. Body text (--text) on page background (--bg)
+1. Body text (--text) on the page background (--bg)
 2. Muted text (--muted) on --bg
-3. Button text (white) on --accent
+3. White button text on --accent
 
-WCAG AA requires 4.5:1 for normal text, 3:1 for large text.
-Tell me which combinations fail and suggest fixed hex values.
+WCAG AA needs 4.5:1 for normal text and 3:1 for large text.
+Tell me which ones fail and give me replacement hex values that pass.
 ```
 
 ---
@@ -590,71 +551,74 @@ Tell me which combinations fail and suggest fixed hex values.
 ### Explain a CSS rule I don't understand
 
 ```
-I found this CSS in my portfolio stylesheet and I don't understand it.
-Please explain it line by line, as if teaching a student who knows basic CSS
-but has not seen this pattern before:
+There's a CSS rule in my stylesheet I don't fully understand. Please explain it
+line by line, as if I know basic CSS but haven't seen this pattern before:
 
-[paste the CSS rule here]
+[paste the CSS here]
 ```
 
 ---
 
-## 12. Going Further (JavaScript)
+## 12. Adding JavaScript
 
-### Add a smooth scroll progress bar
-
-```
-I want to add a thin progress bar at the very top of the page (like a reading
-indicator) that grows from 0% to 100% as the user scrolls down the page.
-
-Please show me:
-1. The HTML (one small div)
-2. The CSS (position, colour using my --accent variable)
-3. The minimal JavaScript to update the bar's width on scroll
-
-Keep the JS under 10 lines. Vanilla JS only — no libraries.
-```
-
----
-
-### Add a "copy email" button
+### Scroll progress bar
 
 ```
-On my contact page I show my email address as plain text. I want to add a
-small "Copy" button next to it that copies the email to the clipboard when clicked.
+I want a thin bar at the very top of the page that fills from 0% to 100% as
+the user scrolls down (like a reading indicator).
 
 Show me:
-1. The updated HTML for the email row
-2. The CSS for the button (should match my existing .btn-outline style)
-3. The minimal JavaScript (vanilla, under 10 lines) that copies the text
-   and temporarily changes the button label to "Copied!"
+1. The HTML (just one div)
+2. The CSS (fixed position, colour from --accent)
+3. The JavaScript that updates the bar width on scroll
+
+Vanilla JS only, under 10 lines. No libraries.
 ```
 
 ---
 
-### Add a project filter (show/hide by tech tag)
+### Copy email button
 
 ```
-My projects.html has project cards, each with tech badge spans like:
+On my contact page I show my email as plain text. I want a small "Copy" button
+next to it that copies the address to the clipboard.
+
+Show me:
+1. The updated HTML
+2. CSS for the button that matches my .btn-outline style
+3. Vanilla JS (under 10 lines) that copies the text and changes the button label
+   to "Copied!" for 2 seconds
+
+No jQuery.
+```
+
+---
+
+### Filter projects by tech tag
+
+```
+My projects.html has cards with badge spans like:
   <span class="badge">Python</span>
 
-I want to add filter buttons at the top: "All", "Python", "JavaScript", "ML"
-Clicking a filter hides cards that don't include that tech badge.
+I want filter buttons at the top — "All", "Python", "JavaScript", "ML" — that
+show only cards matching the selected tag.
 
 Show me:
 1. The HTML for the filter button row
 2. The CSS
 3. Vanilla JavaScript under 20 lines that handles the filtering
 
-No jQuery. No frameworks. Explain each line of the JS.
+No frameworks. Walk me through what each line of the JS does.
 ```
 
 ---
 
-## Tips for Getting Better Results
+## A few things that help
 
-- **Be specific.** The more details you give (your name, your stack, your colours), the less editing you'll need to do.
-- **Paste your code.** Tell the AI "here is my current HTML / CSS" before asking it to modify something.
-- **Ask for explanations.** Add "explain what each line does" to any prompt — you should understand your own portfolio.
-- **Iterate.** If the first answer isn't quite right, reply with "make the cards larger" or "use a softer shadow" — you don't need to start over.
-- **Verify before pasting.** Read the generated code before pasting it. If something looks wrong, ask the AI to explain it.
+**Give the AI your actual code.** Copy and paste your HTML or CSS when asking it to modify something. "Here's my current card HTML:" gets much better results than a vague description.
+
+**Ask why, not just what.** Add "explain what this does" to any prompt. You'll need to explain your own portfolio in interviews.
+
+**One change at a time.** Asking for a single focused change is easier to review than asking for five things at once. If something looks wrong, paste it back and ask the AI to fix it.
+
+**Read before you paste.** Skim the code before adding it to your project. If a line confuses you, ask about it. It's your portfolio — you should understand every part of it.
